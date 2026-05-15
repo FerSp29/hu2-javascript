@@ -1,9 +1,3 @@
-// ==========================================================
-
-// Tarea 1: Creación del objeto de los productos
-
-// ==========================================================
-
 // Se utiliza un objeto para almacenar los productos donde la clave es el id
 const productos = {
     "p1": { id: "p1", nombre: "Monitor", precio: 3000 },
@@ -11,12 +5,6 @@ const productos = {
     "p3": { id: "p3", nombre: "Teclado", precio: 300 },
     "p4": { id: "p4", nombre: "Auriculares", precio: 600}
 };
-
-// ==========================================================
-
-// Tarea 2: Uso de sets en JavaScript
-
-// ==========================================================
 
 // Se crea un set con una lista de números que incluyan valores repetidos
 
