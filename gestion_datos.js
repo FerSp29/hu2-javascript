@@ -42,13 +42,9 @@ for (let numero of numerosSet) {
     console.log(`-> Número: ${numero}`);
 }
 
-// ==========================================================
 
-// Tarea 3: Creación del map
 
-// ==========================================================
-
-// El map requiere datos filtrados por lo que se aplica la validación aquí
+// El map requiere los datos filtrados por lo que se aplica la validación aquí
 const productosValidos = {};
 Object.entries(productos).forEach(([clave, producto]) => {
     // Se valida que tenga ID numérico, nombre no vacío y precio mayor o igual a 0
@@ -57,7 +53,7 @@ Object.entries(productos).forEach(([clave, producto]) => {
     }
 });
 
-// Crea un Map que relacione la categoría del producto (clave) con el nombre (valor)
+// Se crea un Map que relacione la categoría del producto (clave) con el nombre (valor)
 const categoriasMap = new Map();
 categoriasMap.set("Computación", productosValidos.prod1.nombre);
 categoriasMap.set("Accesorios", productosValidos.prod2.nombre);
@@ -65,44 +61,35 @@ categoriasMap.set("Pantallas", productosValidos.prod3.nombre);
 categoriasMap.set("Periféricos", productosValidos.prod4.nombre);
 
 
-// ==========================================
-// TASK 4: Iteración sobre las estructuras de datos
-// ==========================================
-
-// Usa for…in para listar propiedades y valores del objeto
+// Se usa el for…in para listar propiedades y valores del objeto
 console.log("\n--- Iteración del Objeto (for...in) ---");
 for (let clave in productosValidos) {
     console.log(`Propiedad: ${clave} -> ID: ${productosValidos[clave].id}, Nombre: ${productosValidos[clave].nombre}`);
 }
 
-// Usa for…of para recorrer el Set
+// Se usa el for…of para recorrer el Set
 console.log("\n--- Iteración del Set (for...of requerido en Task 4) ---");
 for (let valor of numerosSet) {
     console.log(`Valor del Set: ${valor}`);
 }
 
-// Usa forEach() para recorrer el Map y mostrar claves y valores de forma descriptiva
+// Se usa el forEach() para recorrer el Map y mostrar claves y valores de forma descriptiva
 console.log("\n--- Iteración del Map (forEach) ---");
 categoriasMap.forEach((valor, clave) => {
     console.log(`La categoría [${clave}] contiene el producto: ${valor}`);
 });
 
+console.log("PRUEBAS FINALES");
 
-// ==========================================
-// TASK 5: Validación y Pruebas
-// ==========================================
-
-console.log("\n================ PRUEBAS FINALES (TASK 5) ================");
-
-// Prueba 1: Lista completa de productos (objeto) usando métodos de objetos
+// Prueba 1: Lista completa de los productos (objeto) usando lod métodos de objetos
 console.log("1. Lista completa de productos limpios (Object.values):");
 console.log(Object.values(productosValidos));
 
-// Prueba 2: Lista de productos únicos (Set)
+// Prueba 2: Lista de los productos que sean únicos (Set)
 const productosUnicosSet = new Set(Object.values(productosValidos).map(p => p.nombre));
 console.log("\n2. Lista de productos únicos (Set de nombres):");
 console.log(productosUnicosSet);
 
-// Prueba 3: Categorías y nombres de productos (Map)
+// Prueba 3: Las categorías y los nombres de los productos (Map)
 console.log("\n3. Estructura completa del Map (Categorías):");
 console.log(categoriasMap);
